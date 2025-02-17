@@ -24,3 +24,17 @@ function adicionarAmigo() {
         // Limpa o valor do input
         input.value = ""; 
 }
+// Função para sortear um amigo da lista de participantes
+function sortearAmigo() {
+    if (participantes.length === 0) {
+        alert("A lista de participantes está vazia.");
+        return;
+    }
+    // Seleciona um índice aleatório
+    const indiceAleatorio = Math.floor(Math.random() * participantes.length);
+    // Obtém o nome do participante sorteado
+    const amigoSorteado = participantes[indiceAleatorio];
+     // Exibe o nome do participante sorteado
+     const elementoAmigoSorteado = document.getElementById('amigoSorteado');
+     elementoAmigoSorteado.textContent = `Amigo sorteado: ${amigoSorteado}`;
+ }

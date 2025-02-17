@@ -1,23 +1,26 @@
 // Array para armazenar os participantes
-const participants = [];
+const participantes = [];
 // Função para adicionar um amigo à lista de participantes
 function adicionarAmigo() {
     // Obtém o elemento de input
     const input = document.getElementById('amigo'); 
     // Obtém o valor do input e remove os espaços em branco
     const nome = input.value.trim(); 
-    if (nome !== "") {
+    if (nome === "") {
+         // Exibe um alerta se o nome estiver vazio
+         alert("Por favor, insira um nome válido.");
+         return;
+     }
         // Adiciona o nome do participante ao array
-        participants.push(nome);
+        participantes.push(nome);
         // Obtém o elemento de lista 
         const listaAmigos = document.getElementById('listaAmigos'); 
         // Cria um novo elemento de lista
-        const li = document.createElement('li'); 
+        const novonome = document.createElement('novonome'); 
         // Define o texto do elemento de lista
-        li.textContent = nome; 
+        novonome.textContent = nome; 
         // Adiciona o elemento de lista ao elemento de lista
-        listaAmigos.appendChild(li); 
+        listaAmigos.appendChild(novonome); 
         // Limpa o valor do input
         input.value = ""; 
-    }
 }

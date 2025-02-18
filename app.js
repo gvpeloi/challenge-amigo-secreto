@@ -16,19 +16,19 @@ function adicionarAmigo() {
     participantes.push(nome);
     // Obtém o elemento de lista 
     const listaAmigos = document.getElementById('listaAmigos'); 
-     // Limpa a lista antes de adicionar novos elementos
-     listaAmigos.innerHTML = "";
      // Adiciona todos os participantes à lista
      participantes.forEach(participante => {
     // Cria um novo elemento de lista
-    const lista= document.createElement('li'); 
+    const li= document.createElement('li'); 
     // Define o texto do elemento de lista
-   lista.textContent = nome; 
+   li.textContent = nome; 
     // Adiciona o elemento de lista ao elemento de lista
-    listaAmigos.appendChild(lista); 
+    listaAmigos.appendChild(li); 
     });
     // Limpa o valor do input
     input.value = ""; 
+    // Limpa a lista antes de adicionar novos elementos
+    listaAmigos.innerHTML = "";
 }
 
 // Função para sortear um amigo da lista de participantes

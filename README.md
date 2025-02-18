@@ -1,5 +1,8 @@
 # Este é um projeto de desafio para se construir um amigo secreto
 
+## Link da Aplicação
+https://challenge-amigo-secreto-ebon.vercel.app
+
 ## Tecnologias Utilizadas
 
 ### HTML <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" width="32" height="32">

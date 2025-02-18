@@ -19,11 +19,11 @@ function adicionarAmigo() {
      // Adiciona todos os participantes à lista
      participantes.forEach(participante => {
     // Cria um novo elemento de lista
-    const li= document.createElement('li'); 
+    const lista= document.createElement('li'); 
     // Define o texto do elemento de lista
-   li.textContent = nome; 
+   lista.textContent = nome; 
     // Adiciona o elemento de lista ao elemento de lista
-    listaAmigos.appendChild(li); 
+    listaAmigos.appendChild(lista); 
     });
     // Limpa o valor do input
     input.value = ""; 
@@ -41,7 +41,17 @@ function sortearAmigo() {
     const indiceAleatorio = Math.floor(Math.random() * participantes.length);
     // Obtém o nome do participante sorteado
     const resultado = participantes[indiceAleatorio];
+    // Remove o participante sorteado da lista
+    participantes.splice(indiceAleatorio, 1);
     // Exibe o nome do participante sorteado
     const elementoResultado = document.getElementById('resultado');
     elementoResultado.textContent = `resultado: ${resultado}`;
+    // Atualiza a lista de participantes exibida
+    const listaAmigos = document.getElementById('listaAmigos');
+    participantes.forEach(participante => {
+        const lista = document.createElement('li');
+        lista.textContent = participante;
+        listaAmigos.appendChild(lista);
+    });
+    listaAmigos.innerHTML = "";
 }
